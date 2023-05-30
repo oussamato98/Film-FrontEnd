@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div *ngFor="let film of films" class="d-flex justify-content-center align-items-center my-2">
+    <div *ngIf="film.id == idFilm" class="card w-1000px border-0 shadow-lg">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-3">{{film.title}}</h2>
+        <div class="d-flex flex-row justify-content-around align-items-center">
+          <img src="https://image.tmdb.org/t/p/w300{{film.poster_path}}" alt="" class="img-fluid rounded-lg mr-3">
+            <div>
+              <h5  style="margin: 5%;"><strong>Description :</strong></h5>
+              <p style="margin: 5%">{{film.overview}}</p>
+              <p style="margin: 5%;"><strong>Année de sortie : </strong>{{film.release_date}}</p>
+              <p style="margin: 5%;"><strong>Note : </strong>{{film.vote_average}} / 10</p>
+              <p style="margin: 5%;"><strong>Nombre de vote : </strong>{{film.vote_count}}</p>
+              <p style="margin: 5%;"><strong>Langage : </strong>{{film.original_language}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

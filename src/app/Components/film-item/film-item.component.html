@@ -1,0 +1,11 @@
+
+<div class="card text-center" style="width: 18rem; margin: 10px 5px;">
+  <img src="https://image.tmdb.org/t/p/w300{{film.poster_path}}" alt="" class="card-img-top" width="150" height="300"  (click)="toDetail(this.film)">
+  <div class="card-body">
+    <h5 class="card-title" (click)="toDetail(this.film)">{{film.title}}</h5>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">{{film.vote_average}}</small>
+  </div>
+</div>
+

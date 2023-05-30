@@ -1,0 +1,37 @@
+<div class="container mt-3">
+  <div class="container-fluid my-3">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="searchInput">Movies :</label>
+          </div>
+          <input type="text" id="searchInput" class="form-control" [(ngModel)]="searchText" placeholder="Search movies">
+          <div class="input-group-append">
+            <button class="btn btn-info" >
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <ul style="display: flex;flex-direction:row;flex-wrap: wrap; justify-content: space-around;">
+    <div *ngFor="let film of films | filter : searchText ">
+<!--
+      pour passer en parametre la proprite film du parent au fils a l aide de input voir film item
+-->
+      <app-film-item [film]='film' ></app-film-item>
+    </div>
+  </ul>
+
+
+
+
+
+
+
+
+
